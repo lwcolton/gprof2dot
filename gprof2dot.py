@@ -2649,9 +2649,8 @@ class PstatsParser:
 
     def get_function_name(self, key):
         filename, line, name = key
-        module = os.path.splitext(filename)[0]
-        module = os.path.basename(module)
-        return "%s:%d:%s" % (module, line, name)
+        return "%s:%d:%s" % (filename, line, name)
+
 
     def get_function(self, key):
         try:
